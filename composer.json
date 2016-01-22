@@ -1,8 +1,8 @@
 {
-    "name": "yiisoft/yii2-app-basic",
-    "description": "Yii 2 Basic Project Template",
-    "keywords": ["yii2", "framework", "basic", "project template"],
-    "homepage": "http://www.yiiframework.com/",
+    "name": "rhopress/rhopress-lite",
+    "description": "Rho Press Lite",
+    "keywords": ["rho", "press", "lite", "yii2", "project template"],
+    "homepage": "https://lite.rho.press/",
     "type": "project",
     "license": "AGPL",
     "authors": [
