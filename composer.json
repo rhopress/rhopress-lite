@@ -4,13 +4,19 @@
     "keywords": ["yii2", "framework", "basic", "project template"],
     "homepage": "http://www.yiiframework.com/",
     "type": "project",
-    "license": "BSD-3-Clause",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "vistart",
+            "email": "i@vistart.name",
+            "homepage": "https://vistart.name",
+            "role": "Founder and Project Leader"
+        }
+    ],
     "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-        "forum": "http://www.yiiframework.com/forum/",
-        "wiki": "http://www.yiiframework.com/wiki/",
-        "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/yii2"
+        "issues": "https://github.com/rhopress/rhopress-lite/issues?state=open",
+        "chat": "https//gitter.im/rhopress/rhopress-lite",
+        "source": "https://github.com/rhopress/rhopress-lite"
     },
     "minimum-stability": "stable",
     "require": {
