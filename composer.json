@@ -29,7 +29,7 @@
         "rhopress/yii2-rhopress": "dev-master",
         "bower-asset/font-awesome": "*",
         "bower-asset/respond": "*",
-        "bower-asset/jquery.isotope": "*",
+        "bower-asset/isotope": "*",
         "bower-asset/pretty-photo": "^1.0",
         "bower-asset/html5shiv": "*",
         "bower-asset/open-sans": "*"
