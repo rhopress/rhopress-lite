@@ -38,7 +38,7 @@ RespondAsset::register($this);
                 <?php
                 NavBar::begin([
                     'id' => 'navbar',
-                    'brandLabel' => 'ρ.press',
+                    'brandLabel' => 'ρ.press lite',
                     'brandUrl' => Yii::$app->homeUrl,
                     'options' => [
                         'class' => 'navbar-default',
@@ -49,7 +49,7 @@ RespondAsset::register($this);
                     'options' => ['class' => 'navbar-nav'],
                     'items' => [
                         //['label' => '', 'url' => ['/site/index']],
-                        '<li class="active"><a href="#"><i class="fa fa-home"></i></a></li>',
+                        '<li class="active"><a href="' . Yii::$app->homeUrl . '"><i class="fa fa-home"></i></a></li>',
                     ],
                 ]);
                 NavBar::end();
@@ -59,15 +59,25 @@ RespondAsset::register($this);
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                 ])
                 ?>
-                <?= $content ?>
             </div>
         </header>
+        <div style="margin-top: 72px;">
 
+        </div>
+        <section id="content">
+            <div class="container">
+                <?= $content ?>
+            </div>
+        </section>
+
+        <div style="margin-top: 16px;">
+
+        </div>
         <footer class="footer">
             <div class="container">
-                <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+                <p class="pull-left">&copy; vistart <?= date('Y') ?></p>
 
-                <p class="pull-right"><?= Yii::powered() ?></p>
+                <p class="pull-right"><?= 'Powered by rhopress.' ?></p>
             </div>
         </footer>
 

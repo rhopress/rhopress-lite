@@ -10,4 +10,4 @@
  * @license http://vistart.name/license/
  */
 
-return 'rhopress-lite';
+return 'rhopress';

@@ -52,7 +52,14 @@ class SiteController extends Controller
 
     public function actionLogin()
     {
-        return $this->goHome();
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+        $model = new \rhopress\models\LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack(Yii::$app->homeUrl);
+        }
+        return $this->render('login', ['model' => $model]);
     }
 
     public function actionLogout()
