@@ -27,7 +27,12 @@
         "vistart/yii2-helpers": "*",
         "vistart/yii2-models": "dev-master",
         "rhopress/yii2-rhopress": "dev-master",
-        "phpunit/phpunit": "*"
+        "bower-asset/font-awesome": "*",
+        "bower-asset/respond": "*",
+        "bower-asset/jquery.isotope": "*",
+        "bower-asset/pretty-photo": "^1.0",
+        "bower-asset/html5shiv": "*",
+        "bower-asset/open-sans": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
