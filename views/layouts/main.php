@@ -14,11 +14,11 @@ use app\assets\PrettyPhotoAsset;
 use app\assets\FontAwesomeAsset;
 
 AppAsset::register($this);
-//FontAwesomeAsset::register($this);
-//IsotopeAsset::register($this);
-//PrettyPhotoAsset::register($this);
-//Html5shivAsset::register($this);
-//RespondAsset::register($this);
+FontAwesomeAsset::register($this);
+IsotopeAsset::register($this);
+PrettyPhotoAsset::register($this);
+Html5shivAsset::register($this);
+RespondAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -49,14 +49,7 @@ AppAsset::register($this);
                     'options' => ['class' => 'navbar-nav'],
                     'items' => [
                         //['label' => '', 'url' => ['/site/index']],
-                        '<li class="active"><a href="#"><i class="fa fa-home">Home</i></a></li>',
-                        Yii::$app->user->isGuest ?
-                                ['label' => 'Login', 'url' => ['/site/login']] :
-                                [
-                            'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']
-                                ],
+                        '<li class="active"><a href="#"><i class="fa fa-home"></i></a></li>',
                     ],
                 ]);
                 NavBar::end();
