@@ -9,7 +9,8 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<div class="site-error">
+<section id="error">
+<div class="box site-error">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -25,3 +26,4 @@ $this->title = $name;
     </p>
 
 </div>
+</section>

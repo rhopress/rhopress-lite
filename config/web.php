@@ -41,6 +41,9 @@ $config = [
         'urlManager' => [
             'showScriptName' => false,
             'enablePrettyUrl' => true,
+            'rules' => [
+                'login' => 'site/login',
+            ],
         ],
     ],
     'modules' => [
