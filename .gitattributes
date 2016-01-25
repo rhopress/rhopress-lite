@@ -25,3 +25,5 @@
 /phpunit.local.xml export-ignore
 /tests export-ignore
 /docs export-ignore
+/web/README.md export-ignore
+/web/index-test.php export-ignore
