@@ -51,6 +51,8 @@ $config = [
             'enablePrettyUrl' => true,
             'rules' => [
                 'login' => 'site/login',
+                'reg' => 'site/reg',
+                'logout' => 'site/logout',
             ],
         ],
         'i18n' => [

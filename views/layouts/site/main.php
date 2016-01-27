@@ -1,5 +1,4 @@
 <?php
-
 /**
  *  _   __ __ _____ _____ ___  ____  _____
  * | | / // // ___//_  _//   ||  __||_   _|
@@ -9,8 +8,13 @@
  * @copyright Copyright (c) 2016 vistart
  * @license http://vistart.name/license/
  */
-
 ?>
 <?php $this->beginContent('@app/views/layouts/main.php') ?>
-<?= $content ?>
+<section id="body">
+    <div class="container">
+        <div class="box first last">
+            <?= $content ?>
+        </div>
+    </div>
+</section>
 <?php $this->endContent() ?>

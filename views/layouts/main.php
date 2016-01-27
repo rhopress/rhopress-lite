@@ -49,7 +49,15 @@ RespondAsset::register($this);
                     'options' => ['class' => 'navbar-nav'],
                     'items' => [
                         //['label' => '', 'url' => ['/site/index']],
-                        '<li class="active"><a href="' . Yii::$app->homeUrl . '"><i class="fa fa-home"></i></a></li>',
+                        '<li><a href="' . Yii::$app->homeUrl . '"><i class="fa fa-home"></i></a></li>',
+                        Yii::$app->user->isGuest ?
+                            ['label' => 'Login', 'url' => ['/site/login']] :
+                            [
+                            'label' => 'Logout (' . Yii::$app->user->identity->profile->display_name . ')',
+                            'url' => ['/site/logout'],
+                            'linkOptions' => ['data-method' => 'post']
+                            ],
+                        ['label' => 'New', 'url' => ['new']],
                     ],
                 ]);
                 NavBar::end();
@@ -61,14 +69,10 @@ RespondAsset::register($this);
                 ?>
             </div>
         </header>
-        <div style="margin-top: 72px;">
+        <div style="margin-top: 144px;">
 
         </div>
-        <section id="content">
-            <div class="container">
-                <?= $content ?>
-            </div>
-        </section>
+        <?= $content ?>
 
         <div style="margin-top: 16px;">
 

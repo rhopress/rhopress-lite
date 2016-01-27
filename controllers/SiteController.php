@@ -9,18 +9,26 @@ use yii\filters\VerbFilter;
 
 class SiteController extends Controller
 {
+
+    public $layout = 'site/main';
+
     public function behaviors()
     {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+                'only' => ['logout', 'reg'],
                 'rules' => [
                     [
                         'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+                    [
+                        'actions' => ['reg'],
+                        'allow' => true,
+                        'roles' => ['?']
+                    ]
                 ],
             ],
             'verbs' => [
@@ -67,5 +75,14 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionReg()
+    {
+        $reg = new \rhopress\models\RegisterForm();
+        if ($reg->load(Yii::$app->request->post()) && $reg->register()) {
+            return $this->redirect(['site/login']);
+        }
+        return $this->render('reg', ['model' => $reg]);
     }
 }
